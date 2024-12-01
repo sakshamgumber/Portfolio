@@ -1,0 +1,28 @@
+/* Header.css */
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.typewriter {
+  font-family: monospace;
+  white-space: nowrap; /* Prevent line wrapping */
+  overflow: hidden; 
+  border-right: 3px solid black; /* Create the cursor */
+  display: inline-block;
+  width: 0; /* Initially set width to 0 */
+  animation: typewriter 3s steps(30) 1s forwards, blink-caret 0.75s step-end infinite;
+}
